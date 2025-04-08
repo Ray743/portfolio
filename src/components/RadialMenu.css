@@ -1,0 +1,19 @@
+@keyframes flickerGlow {
+    0%, 100% {
+      opacity: 1;
+      text-shadow: 0 0 4px #39FF14, 0 0 8px #39FF14, 0 0 12px #39FF14;
+    }
+    50% {
+      opacity: 0.3;
+      text-shadow: 0 0 2px #39FF14, 0 0 6px #00ffcc;
+    }
+  }
+  
+  .grab-me-blink {
+    background: linear-gradient(90deg, #39FF14, #00ffcc, #39FF14);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: flickerGlow 1.2s infinite ease-in-out;
+  }
+  

@@ -1,0 +1,78 @@
+@config "../tailwind.config.js";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom style */
+body {
+  @apply bg-dark text-neon font-techno;
+
+.neon-text {
+  text-shadow:
+    0 0 5px #39FF14,
+    0 0 10px #39FF14,
+    0 0 20px #39FF14;
+}
+
+}
+
+/* index.css or App.css */
+.pulse-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at center, rgba(57, 255, 20, 0.15), transparent, rgb(0, 0, 0));
+  animation: pulseBackground 4s ease-in-out infinite;
+}
+
+@keyframes pulseBackground {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.circuit-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('/circuit-lines.svg');
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: 0.15;
+  animation: moveCircuit 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes moveCircuit {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+.motherboard-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('/motherboard.svg');
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: 0.05;
+  animation: motherboardPulse 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes motherboardPulse {
+  0%, 100% {
+    opacity: 0.03;
+  }
+  50% {
+    opacity: 0.12;
+  }
+}
+
+
+
+
+
