@@ -2,7 +2,7 @@
 
 
 
-This sleek, modern portfolio was crafted with **Vite** and **React** — combining lightning-fast build times with a smooth user experience.
+This modern,desktop UI portfolio was crafted with **Vite** and **React**. Inspired by the *Kali desktop UI* — combining lightning-fast build times with a smooth user experience.
 
 🚀 **Hosted live on GitHub Pages:**  
 [https://ray743.github.io/portfolio](https://ray743.github.io/portfolio)
