@@ -10,4 +10,5 @@ Inspired by the **Kali desktop UI**
 [https://ray743.github.io/portfolio](https://ray743.github.io/portfolio)
 
 Feel free to explore and see my projects in action!
+
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=Ray743portfolio/.)
