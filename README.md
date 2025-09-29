@@ -59,7 +59,7 @@ Welcome to my **personal portfolio**, a modern, interactive showcase of my skill
 
 ## 🌟 Special Highlights
 
-- Fully **desktop-like experience** inspired by Kali Linux.
+- **desktop-like experience** inspired by Kali Linux.
 - **Drag-and-drop windows** with maximize/restore/close functionality.
 - **Animated icons** on load for a playful, interactive feel.
 - **Responsive UI** ensures usability across devices.
