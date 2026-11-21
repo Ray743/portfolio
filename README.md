@@ -1,70 +1,41 @@
-# Raynold Bobola Portfolio 2.0 💻 [Visit](https://ray743.github.io/portfolio/)
+# Raynold Bobola | Portfolio 2.1
 
-Welcome to my **personal portfolio**, a modern, interactive showcase of my skills, projects, and professional profile. This portfolio is inspired by the **Kali Linux desktop UI**, bringing a desktop-like experience to the web with draggable windows, a top taskbar, and modular sections.
+A desktop-inspired developer portfolio: draggable windows, a dock, desktop icons and a live clock, styled after a Linux desktop.
 
----
+**Live:** https://ray743.github.io/portfolio/
 
-## 🚀 Features
+## Features
 
-- **Desktop-Inspired UI**: Mimics a Kali Linux desktop with a topbar, desktop icons, and draggable windows.
-- **Interactive Windows**: Open "About Me", "Skills", "Projects", and "Contact" in resizable and movable windows.
-- **Modern Contact Form**: Built with EmailJS for real-time messaging.
-- **Responsive Design**: Works seamlessly on mobile, tablet, and desktop screens.
-- **Smooth Animations**: Powered by **Framer Motion** for window transitions, icon animations, and section reveals.
-- **Project Modals**: Click on projects to view detailed descriptions, live previews, and tech used.
-- **Real-Time Topbar Clock**: Displays the current time on the top taskbar.
+- Desktop UI with draggable, maximisable windows (double-click the title bar, or press Esc to close)
+- Windows: About, Resume (experience, education, certifications), Skills, Projects, Contact
+- Bottom dock for quick navigation plus GitHub and LinkedIn links
+- Project cards with tech tags and detail modals
+- Contact form powered by EmailJS
+- Fully responsive: windows go full screen on phones
+- SEO and link-preview meta tags, structured data, reduced-motion support
 
----
+## Tech
 
-## 🖥 Portfolio Sections
+React 19, Vite 7, Tailwind CSS 4, Framer Motion, react-icons, lucide-react, EmailJS, gh-pages.
 
-### About Me
-- Personal introduction with a circular profile image.
-- Overview of professional skills and focus areas: **Full-Stack Development, Python, Linux, AI integration**.
+## Run locally
 
-### Skills
-- Categorized and visually displayed with icons.
-- Categories include:
-  - **Languages**: JavaScript, Python, Bash, SQL
-  - **Frameworks & Libraries**: React, Tailwind CSS, Framer Motion, Express JS, FastAPI, WordPress
-  - **Tools & Platforms**: Axios, Crawl4AI, BeautifulSoup, Linux CLI, Python Scripting
-  - **DevOps & Deployment**: Git, CI/CD, pm2, Apache Reverse Proxy
-  - **AI & Machine Learning**: TensorFlow, Hugging Face Transformers, NLP, Datasets
+```bash
+npm install
+npm run dev
+```
 
-### Projects
-- Detailed showcase of selected projects:
-  1. **Portfolio Website 2.0** – Kali Linux-inspired desktop portfolio.  
-  2. **Red (AI-Powered Linux Assistant)** – Early-stage natural language Linux CLI assistant project.  
-  3. **O&M Dashboard** – Internal reporting tool with real-time data and multi-user logins.  
-  4. **Aronga PNG Limited Website** – Freelance company website with responsive design, Google Maps integration, and SEO optimization.  
-  5. **The Seeker** – Automated job board aggregating multiple Papua New Guinea job sources, built with React + Vite frontend and FastAPI backend.
+## Deploy
 
-### Contact
-- **Modern contact form** powered by EmailJS.
-- Fields: Subject, Name, Email, Date & Time (optional), and Message.
-- Fully responsive and interactive with feedback on message sent status.
+```bash
+npm run deploy
+```
 
----
+Builds to `dist/` and publishes it to the `gh-pages` branch. The Vite `base` is `/portfolio/`.
 
-## 🛠 Tech Stack
+## Editing content
 
-- **Frontend**: React, Vite, Tailwind CSS, Framer Motion, React Router
-- **Backend / APIs**: Express JS, FastAPI, EmailJS
-- **Database**: MySQL / SQL
-- **Tools & Libraries**: Axios, Crawl4AI, BeautifulSoup, TensorFlow, Hugging Face Transformers
-- **Deployment & DevOps**: Git, CI/CD, pm2, Apache Reverse Proxy
-- **Other**: Linux CLI, Python scripting, JSON / JSONL datasets
-
----
-
-## 🌟 Special Highlights
-
-- **desktop-like experience** inspired by Kali Linux.
-- **Drag-and-drop windows** with maximize/restore/close functionality.
-- **Animated icons** on load for a playful, interactive feel.
-- **Responsive UI** ensures usability across devices.
-- **Interactive modals** provide detailed project descriptions and live previews.
-
----
-
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=Ray743portfolio/.)
+- Profile, experience, education and certifications: `src/data/resumeData.json`
+- Projects: `src/components/sections/projects.jsx`
+- Skills: `src/components/sections/skills.jsx`
+- Window list (desktop icons and dock): `src/components/sectionsConfig.jsx`

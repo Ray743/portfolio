@@ -1,36 +1,41 @@
-@config "../tailwind.config.js";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Custom style */
-body {
-  @apply bg-dark text-neon font-techno;
-
-.neon-text {
-  text-shadow:
-    0 0 5px #39FF14,
-    0 0 10px #39FF14,
-    0 0 20px #39FF14;
-}
-
-}
-
-/* index.css or App.css */
-.pulse-background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: radial-gradient(circle at center, rgba(57, 255, 20, 0.15), transparent, rgb(0, 0, 0));
-  animation: pulseBackground 4s ease-in-out infinite;
-}
-
-@keyframes pulseBackground {
-  0%, 100% {
-    opacity: 0.1;
+/* Element defaults live in the base layer so Tailwind utilities can override them. */
+@layer base {
+  :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #000;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  50% {
-    opacity: 0.4;
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: black;
+  }
+
+  a {
+    font-weight: 500;
+    color: #22d3ee;
+    text-decoration: inherit;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 2px;
   }
 }
 
@@ -38,14 +43,13 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url('/circuit-lines.svg');
+  background-image: url('./assets/circuit-lines.svg');
   background-repeat: repeat;
   background-size: cover;
   opacity: 0.15;
   animation: moveCircuit 20s linear infinite;
   pointer-events: none;
 }
-
 @keyframes moveCircuit {
   0% { background-position: 0 0; }
   100% { background-position: 1000px 1000px; }
@@ -55,24 +59,33 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url('/motherboard.svg');
+  background-image: url('./assets/motherboard.svg');
   background-repeat: repeat;
   background-size: cover;
   opacity: 0.05;
   animation: motherboardPulse 6s ease-in-out infinite;
   pointer-events: none;
+  transform: scaleX(-1);
 }
-
 @keyframes motherboardPulse {
-  0%, 100% {
-    opacity: 0.03;
-  }
-  50% {
-    opacity: 0.12;
-  }
+  0%, 100% { opacity: 0.03; }
+  50% { opacity: 0.12; }
 }
 
+/* One-off shake to draw the eye to the About icon. */
+@keyframes shake-icon {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+.icon-shake-on-load {
+  animation: shake-icon 0.8s ease-in-out;
+}
 
-
-
-
+@media (prefers-reduced-motion: reduce) {
+  .circuit-overlay,
+  .motherboard-bg,
+  .icon-shake-on-load {
+    animation: none;
+  }
+}

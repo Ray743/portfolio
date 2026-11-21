@@ -1,0 +1,54 @@
+{
+  "name": "Raynold Bobola",
+  "headline": "Full-Stack Developer · ICT Professional · Python · Linux",
+  "location": "Port Moresby, Papua New Guinea",
+  "summary": "Innovative IT professional with an Advanced Professional Diploma in Information Technology and hands-on experience in full-stack development, database integration, and automation. I design, build, and deploy production systems end to end, from Python scrapers and REST APIs to React frontends and hardened Linux servers.",
+  "links": {
+    "github": "https://github.com/Ray743",
+    "linkedin": "https://www.linkedin.com/in/raynold-bobola-740b64341/"
+  },
+  "experience": [
+    {
+      "role": "Full-Stack Developer",
+      "org": "The Seeker (personal product)",
+      "years": "2025",
+      "achievements": [
+        "Built a full-stack job aggregator that pulls 200+ listings a day from multiple PNG job boards into one hub",
+        "Wrote Python scrapers (Crawl4AI, BeautifulSoup) with cron automation and error logging",
+        "Designed a MySQL schema and exposed it through a FastAPI backend behind an Apache reverse proxy with SSL, kept alive by pm2",
+        "Shipped a React, Vite and Tailwind frontend and solved CORS, HTTPS and API integration issues in production"
+      ]
+    },
+    {
+      "role": "Freelance Web Developer",
+      "org": "Aronga PNG Limited",
+      "years": "2024",
+      "achievements": [
+        "Designed and built the company website in React and Tailwind",
+        "Deployed it on a Linux VPS and managed DNS (A and MX records) and Google indexing"
+      ]
+    },
+    {
+      "role": "Technical Installations & Communications Support Lead",
+      "org": "Aronga PNG Limited (Vodafone sites)",
+      "years": "2023 – 2024",
+      "achievements": [
+        "Installed RF antennas, fibre optics and VSAT equipment across telecom sites",
+        "Cut site downtime by 60% through structured troubleshooting"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Advanced Professional Diploma in Information Technology",
+      "org": "Datec Learning Centre, Lae, Morobe Province",
+      "years": "2016 – 2020",
+      "detail": "Java Programming, Java EE (JDBC, Servlets, JSP, UML), SQL Server, OOP, Web Development"
+    }
+  ],
+  "certifications": [
+    "Cisco Certified Network Associate (CCNA)",
+    "CompTIA A+",
+    "Java Programming (SL-110, SL-275)"
+  ]
+}
